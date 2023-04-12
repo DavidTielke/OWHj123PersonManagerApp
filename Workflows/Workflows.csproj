@@ -1,24 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>DavidTielke.OwHj123.UI.ConsoleClient</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AuditationManagement\AuditationManagement.csproj" />
-    <ProjectReference Include="..\DataCsvStoring\DataCsvStoring.csproj" />
+    <ProjectReference Include="..\DataClasses\DataClasses.csproj" />
     <ProjectReference Include="..\PersonManagement\PersonManagement.csproj" />
-    <ProjectReference Include="..\Workflows\Workflows.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="data.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
