@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuditationManagement\AuditationManagement.csproj" />
     <ProjectReference Include="..\DataCsvStoring\DataCsvStoring.csproj" />
     <ProjectReference Include="..\PersonManagement\PersonManagement.csproj" />
   </ItemGroup>
