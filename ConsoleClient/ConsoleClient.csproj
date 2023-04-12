@@ -5,7 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>DavidTielke.OwHj123.ConsoleClient</RootNamespace>
+    <RootNamespace>DavidTielke.OwHj123.UI.ConsoleClient</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

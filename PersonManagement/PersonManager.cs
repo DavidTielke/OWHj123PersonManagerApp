@@ -1,7 +1,7 @@
-﻿using DavidTielke.OwHj123.DataClasses;
-using DavidTielke.OwHj123.DataCsvStoring;
+﻿using DavidTielke.OwHj123.CrossCutting.DataClasses;
+using DavidTielke.OwHj123.Data.DataCsvStoring;
 
-namespace DavidTielke.OwHj123.PersonManagement;
+namespace DavidTielke.OwHj123.Logic.PersonManagement;
 
 public class PersonManager
 {

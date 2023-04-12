@@ -1,4 +1,4 @@
-﻿namespace DavidTielke.OwHj123.DataClasses;
+﻿namespace DavidTielke.OwHj123.CrossCutting.DataClasses;
 
 public class Person
 {

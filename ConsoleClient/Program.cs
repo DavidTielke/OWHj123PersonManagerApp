@@ -1,6 +1,6 @@
-﻿using DavidTielke.OwHj123.PersonManagement;
+﻿using DavidTielke.OwHj123.Logic.PersonManagement;
 
-namespace DavidTielke.OwHj123.ConsoleClient;
+namespace DavidTielke.OwHj123.UI.ConsoleClient;
 
 internal class Program
 {

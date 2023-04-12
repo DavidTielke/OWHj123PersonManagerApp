@@ -1,6 +1,6 @@
-﻿using DavidTielke.OwHj123.DataClasses;
+﻿using DavidTielke.OwHj123.CrossCutting.DataClasses;
 
-namespace DavidTielke.OwHj123.DataCsvStoring;
+namespace DavidTielke.OwHj123.Data.DataCsvStoring;
 
 public class PersonRepository
 {

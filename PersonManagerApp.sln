@@ -16,6 +16,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{AB899B3A-175D-4E91-A020-ABC00F8C1940}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{28FF5562-5C5E-418C-A820-66D26720FA4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{C6D7B567-CF75-4EF2-A04F-C6E9995C88A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{E7BD7AD4-44BA-452B-B1CE-A8925C920150}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{089D8235-330D-464A-9CEC-59D51B4DA01C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +49,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B102290E-561F-4318-91FC-3665612BA964} = {28FF5562-5C5E-418C-A820-66D26720FA4C}
+		{8F70795B-D4C3-49F2-9919-55D5F16C701E} = {E7BD7AD4-44BA-452B-B1CE-A8925C920150}
+		{AB899B3A-175D-4E91-A020-ABC00F8C1940} = {C6D7B567-CF75-4EF2-A04F-C6E9995C88A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FDD3A3D-8642-425F-8C98-4E5B59686A0E}
