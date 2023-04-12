@@ -1,4 +1,4 @@
-﻿namespace ConsoleClient;
+﻿namespace DavidTielke.OwHj123.ConsoleClient;
 
 internal class Program
 {
