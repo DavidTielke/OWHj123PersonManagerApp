@@ -1,14 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<NDepend AppName="OwH123" Platform="DotNet" FileWrittenByProductVersion="2022.1.2.9650">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NDepend AppName="OwH123" Platform="DotNet" FileWrittenByProductVersion="2023.1.0.9670">
   <OutputDir KeepXmlFiles="False">.\NDependOut</OutputDir>
-  <IDEFiles />
+  <IDEFiles>
+    <IDEFile FilePath=".\PersonManagerApp.sln" Filters="-test" Configuration="DEBUG|AnyCPU">
+      <RootDirResolvingInfo Enabled="False" Hints="Debug|bin|.bin|b|AnyCPU|x64|x86|v*.*|net*" TimeOut="10">
+        <RootDir>.</RootDir>
+      </RootDirResolvingInfo>
+    </IDEFile>
+  </IDEFiles>
+  <RuntimeProfileDesc>.NET 6.0</RuntimeProfileDesc>
   <Assemblies />
-  <FrameworkAssemblies />
-  <Dirs>
-    <Dir>C:\Windows\Microsoft.NET\Framework\v4.0.30319</Dir>
-    <Dir>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF</Dir>
-    <Dir>C:\Users\david\.nuget\packages</Dir>
-  </Dirs>
+  <Dirs />
   <MergeCodeGeneratedByCompiler>True</MergeCodeGeneratedByCompiler>
   <ZipSourceFiles>True</ZipSourceFiles>
   <Report Kind="0" SectionsEnabled="110591" XslPath="" Flags="261120" NbItemsToUnfold="5" />
@@ -47,12 +49,16 @@
       <Serie MetricName="Annual Interest (Metric)" MetricUnit="man-days" Color="#FFFF8C00" ChartType="Line" ScaleExp="0" />
     </Chart>
   </TrendMetrics>
+  <GitHub Account="" Repo="" />
   <HistoricAnalysisResult PersistRecurrence="3" UseCustomDir="False" CustomDir="" />
   <SourceFileRebasing FromPath="" ToPath="" />
   <PathVariables />
-  <RuleFiles />
+  <RuleFiles>
+    <RuleFile Active="True" Path=".\OWHJ123.ndrules" />
+    <RuleFile Active="True" Path="..\..\..\..\OneDrive\david-tielke.de\NDepend Regeln\NHRules.ndrules" />
+  </RuleFiles>
   <GraphFiles />
-  <ProjectRules AreActive="True" />
+  <ProjectRules AreActive="False" QueryPersistenceKind="PersistOnlyQueryIdForUntouchedQueries" />
   <ProjectDebtSettings DebtSettingsStorage="0" SettingsFilePath="">
     <DebtSettings>
       <DebtFactor>1</DebtFactor>
@@ -75,8 +81,7 @@
       <High2Critical_SeverityThreshold>72000000000</High2Critical_SeverityThreshold>
       <Critical2Blocker_SeverityThreshold>360000000000</Critical2Blocker_SeverityThreshold>
     </DebtSettings>
-  </ProjectDebtSettings>
-  <Queries>
+  </ProjectDebtSettings><Queries>
     <Group Name="Quality Gates" Active="True" ShownInReport="False">
       <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Quality Gates Evolution</Name>
 from qg in QualityGates
@@ -13045,6 +13050,4 @@ select new {
 //</HowToFix>]]></Query>
       </Group>
     </Group>
-  </Queries>
-  <WarnFilter />
-</NDepend>
+  </Queries></NDepend>

@@ -1,4 +1,6 @@
-﻿namespace DavidTielke.OwHj123.ConsoleClient;
+﻿using DavidTielke.OwHj123.PersonManagement;
+
+namespace DavidTielke.OwHj123.ConsoleClient;
 
 internal class Program
 {

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Queries>
+  <Group Name="Modularisierung" Active="True" ShownInReport="False">
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Methoden die mögl. SRP verletzen</Name>
+warnif count > 0 
+from m in JustMyCode.Methods
+where
+ m.NbLinesOfCode > 2 ||
+ m.CyclomaticComplexity > 7 ||
+ m.NbParameters > 5
+select new { m.ParentType, m, m.NbLinesOfCode, m.CyclomaticComplexity, m.NbParameters } 
+]]></Query>
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>Klassen die mögl. SRP verletzten</Name>
+warnif count > 0 
+from t in JustMyCode.Types
+let ctorValidations = t.Constructors.Where(c => c.NbParameters > 5)
+let severity = t.NbLinesOfCode > 4 ? Severity.Blocker : Severity.Medium
+let debt = t.NbLinesOfCode.Linear(4, 5, 400, 50)
+where
+ t.NbLinesOfCode > 2 ||
+ t.NbMethods > 10 ||
+ ctorValidations.Any()
+
+select new{t, t.NbLinesOfCode, t.NbMethods, ctorValidations, severity, debt}]]></Query>
+  </Group>
+  <Group Name="Namensmuster" Active="True" ShownInReport="False">
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Klassen die keinem Namensmuster folgen</Name>
+warnif count > 0 
+from t in JustMyCode.Types.Where(t => !t.ParentNamespace.NameLike("DataClasses"))
+let namenpatterns = new[]{"Manager","Repository","Parser"}
+where !t.IsGeneratedByCompiler &&
+ !namenpatterns.Any(np=> t.Name.EndsWith(np))
+select new { t, Severity = Severity.Critical }
+
+]]></Query>
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <TrendMetric Name="Grad Musterkonsistenz" Unit="%" />  
+
+// #### BLACKLISTING
+let blacklistNamespaceSuffix = new string[]{"DataClasses"}
+let blacklistNamespacePrefix = new string[]{}
+
+let typesFiltered = JustMyCode.Types
+                    .Where(t => !t.IsGeneratedByCompiler)
+                    .Where(t => blacklistNamespaceSuffix.All(bns => !t.ParentNamespace.Name.EndsWith(bns)))
+                    .Where(t => blacklistNamespacePrefix.All(bns => !t.ParentNamespace.Name.StartsWith(bns)))
+
+// #### NAMENSMUSTER
+let namePatterns = new string[] 
+{
+ "Manager",
+ "Repository",
+ "Parser"
+}
+
+// #### ABFRAGE
+let typesFollowingPatterns = typesFiltered.Where(t => namePatterns.Any(np => t.SimpleName.EndsWith(np)))
+let typesNotFollowingPatterns = typesFiltered.Where(t => !namePatterns.Any(np => t.SimpleName.EndsWith(np)))
+select 100d * typesFollowingPatterns.Count() / typesFiltered.Count()
+
+]]></Query>
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Verstöße Namensmuster Manager</Name>
+warnif count > 0 
+from t in JustMyCode.Types.Where(type => type.SimpleName.EndsWith("Manager"))
+let allowedMethods = new[]{"Add","Remove","Update"}
+let allowedPrefixes = new[]{"Get","Is","Are"}
+let violatingMethods = t.Methods.Where(m => !(allowedMethods.Any(m1 => m1 == m.SimpleName) 
+                                              || allowedPrefixes.Any(m1 => m.SimpleName.StartsWith(m1))))
+
+where violatingMethods.Count() > 0
+select new { t, violatingMethods, Severity = Severity.Critical}
+]]></Query>
+  </Group>
+</Queries>

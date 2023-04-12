@@ -1,4 +1,4 @@
-﻿namespace DavidTielke.OwHj123.ConsoleClient;
+﻿namespace DavidTielke.OwHj123.DataClasses;
 
 public class Person
 {

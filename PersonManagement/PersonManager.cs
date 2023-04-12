@@ -1,4 +1,7 @@
-﻿namespace DavidTielke.OwHj123.ConsoleClient;
+﻿using DavidTielke.OwHj123.DataClasses;
+using DavidTielke.OwHj123.DataCsvStoring;
+
+namespace DavidTielke.OwHj123.PersonManagement;
 
 public class PersonManager
 {

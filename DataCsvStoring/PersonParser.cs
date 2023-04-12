@@ -1,4 +1,6 @@
-﻿namespace DavidTielke.OwHj123.ConsoleClient;
+﻿using DavidTielke.OwHj123.DataClasses;
+
+namespace DavidTielke.OwHj123.DataCsvStoring;
 
 public class PersonParser
 {
