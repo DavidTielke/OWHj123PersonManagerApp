@@ -4,6 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <RootNamespace>DavidTielke.OwHj123.Logic.Domain.AuditationManagement</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

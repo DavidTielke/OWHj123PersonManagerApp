@@ -1,5 +1,5 @@
-﻿using AuditationManagement;
-using DavidTielke.OwHj123.CrossCutting.DataClasses;
+﻿using DavidTielke.OwHj123.CrossCutting.DataClasses;
+using DavidTielke.OwHj123.Logic.Domain.AuditationManagement;
 using DavidTielke.OwHj123.Logic.Domain.PersonManagement;
 
 namespace DavidTielke.OwHj123.UI.ConsoleClient;
