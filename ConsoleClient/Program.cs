@@ -1,7 +1,5 @@
-﻿using DavidTielke.OwHj123.Data.DataCsvStoring;
-using DavidTielke.OwHj123.Logic.Domain.AuditationManagement;
-using DavidTielke.OwHj123.Logic.Domain.PersonManagement;
-using FileStoring;
+﻿using Configuration;
+using Mappings;
 using Ninject;
 using Workflows;
 
@@ -11,15 +9,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var kernel = new StandardKernel();
+        var kernel = new KernelFactory().Create();
 
-        kernel.Bind<IPersonManagementWorkflows>().To<PersonManagementWorkflows>();
-        kernel.Bind<IAuditEntryManager>().To<AuditEntryManager>();
-        kernel.Bind<IAuditEntryRepository>().To<AuditEntryRepository>();
-        kernel.Bind<IPersonManager>().To<PersonManager>();
-        kernel.Bind<IPersonRepository>().To<PersonRepository>();
-        kernel.Bind<IPersonParser>().To<PersonParser>();
-        kernel.Bind<IFileStorer>().To<FileStorer>();
+        var config = kernel.Get<IConfigurator>();
+        config.Set("person.csvpath", "data.csv");
+        config.Set("persons.agetreshold", 10);
 
         var workflow = kernel.Get<IPersonManagementWorkflows>();
 

@@ -1,11 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>DavidTielke.OwHj123.UI.ConsoleClient</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,14 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mappings\Mappings.csproj" />
+    <ProjectReference Include="..\AuditationManagement\AuditationManagement.csproj" />
+    <ProjectReference Include="..\Configuration\Configuration.csproj" />
     <ProjectReference Include="..\Workflows\Workflows.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="data.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

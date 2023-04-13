@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{B102290E-561F-4318-91FC-3665612BA964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{B102290E-561F-4318-91FC-3665612BA964}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C1CB911-8778-44AA-A6B2-8202106ADE05}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		OWHJ123.ndrules = OWHJ123.ndrules
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCsvStoring", "DataCsvStoring\DataCsvStoring.csproj", "{4CDAC3BB-EEB0-40C3-89E6-07134EFB53A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCsvStoring", "DataCsvStoring\DataCsvStoring.csproj", "{4CDAC3BB-EEB0-40C3-89E6-07134EFB53A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\DataClasses.csproj", "{8F70795B-D4C3-49F2-9919-55D5F16C701E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataClasses", "DataClasses\DataClasses.csproj", "{8F70795B-D4C3-49F2-9919-55D5F16C701E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{AB899B3A-175D-4E91-A020-ABC00F8C1940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{AB899B3A-175D-4E91-A020-ABC00F8C1940}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{28FF5562-5C5E-418C-A820-66D26720FA4C}"
 EndProject
@@ -27,13 +27,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{089D8235-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{891F0FD3-8E09-497C-B273-571D745032CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditationManagement", "AuditationManagement\AuditationManagement.csproj", "{DC5831A5-1DEE-4BF8-88E6-B26898469DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuditationManagement", "AuditationManagement\AuditationManagement.csproj", "{DC5831A5-1DEE-4BF8-88E6-B26898469DE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{5E08B686-45DD-4160-B574-5A7F4073669F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflows", "Workflows\Workflows.csproj", "{AF4A95C1-98AE-489D-9638-566EAC7EF14A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflows", "Workflows\Workflows.csproj", "{AF4A95C1-98AE-489D-9638-566EAC7EF14A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStoring", "FileStoring\FileStoring.csproj", "{A245BD2A-792B-4291-B687-EFAFF02196B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileStoring", "FileStoring\FileStoring.csproj", "{A245BD2A-792B-4291-B687-EFAFF02196B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F3B35B1A-A366-45C9-B8CD-B86BCE59DC14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappings", "Mappings\Mappings.csproj", "{B1B43A40-E803-426A-802A-8E6182654118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{893E6D99-BA83-4117-8137-3457195A7133}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +75,14 @@ Global
 		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B43A40-E803-426A-802A-8E6182654118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B43A40-E803-426A-802A-8E6182654118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B43A40-E803-426A-802A-8E6182654118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B43A40-E803-426A-802A-8E6182654118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893E6D99-BA83-4117-8137-3457195A7133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893E6D99-BA83-4117-8137-3457195A7133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893E6D99-BA83-4117-8137-3457195A7133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893E6D99-BA83-4117-8137-3457195A7133}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +97,8 @@ Global
 		{5E08B686-45DD-4160-B574-5A7F4073669F} = {C6D7B567-CF75-4EF2-A04F-C6E9995C88A2}
 		{AF4A95C1-98AE-489D-9638-566EAC7EF14A} = {5E08B686-45DD-4160-B574-5A7F4073669F}
 		{A245BD2A-792B-4291-B687-EFAFF02196B8} = {089D8235-330D-464A-9CEC-59D51B4DA01C}
+		{B1B43A40-E803-426A-802A-8E6182654118} = {F3B35B1A-A366-45C9-B8CD-B86BCE59DC14}
+		{893E6D99-BA83-4117-8137-3457195A7133} = {E7BD7AD4-44BA-452B-B1CE-A8925C920150}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FDD3A3D-8642-425F-8C98-4E5B59686A0E}

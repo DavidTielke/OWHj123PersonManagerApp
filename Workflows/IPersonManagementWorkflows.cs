@@ -4,6 +4,6 @@ namespace Workflows;
 
 public interface IPersonManagementWorkflows
 {
-    IQueryable<Person> RunGetAllAdults(string userId);
-    IQueryable<Person> RunGetAllChildren(string userId);
+    IQueryable<Person> RunGetAllAdults();
+    IQueryable<Person> RunGetAllChildren();
 }
