@@ -15,5 +15,9 @@ public class FileStorer : IFileStorer
         {
             throw new StoreNotFoundException("Datei war nicht vorhanden", exc);
         }
+        catch (Exception exc)
+        {
+            throw new FileStoringException("blahb bolah", exc);
+        }
     }
 }
