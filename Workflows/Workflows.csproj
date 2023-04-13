@@ -4,12 +4,14 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <RootNamespace>DavidTielke.OwHj123.Log.Business.Workflows</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AuditationManagement\AuditationManagement.csproj" />
     <ProjectReference Include="..\DataClasses\DataClasses.csproj" />
     <ProjectReference Include="..\PersonManagement\PersonManagement.csproj" />
+    <ProjectReference Include="..\Workflows.Contract\Workflows.Contract.csproj" />
   </ItemGroup>
 
 </Project>

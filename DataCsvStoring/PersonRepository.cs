@@ -1,6 +1,7 @@
-﻿using Configuration;
+﻿using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
 using DavidTielke.OwHj123.CrossCutting.DataClasses;
-using FileStoring;
+using DavidTielke.OwHj123.Data.DataCsvStoring.Contract;
+using DavidTielke.OwHj123.Data.FileStoring.Contract;
 
 namespace DavidTielke.OwHj123.Data.DataCsvStoring;
 

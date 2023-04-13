@@ -1,12 +1,18 @@
-﻿using Configuration;
+﻿using DavidTielke.OwHj123.CrossCutting.Configuration;
+using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
 using DavidTielke.OwHj123.Data.DataCsvStoring;
+using DavidTielke.OwHj123.Data.DataCsvStoring.Contract;
+using DavidTielke.OwHj123.Data.FileStoring;
+using DavidTielke.OwHj123.Data.FileStoring.Contract;
+using DavidTielke.OwHj123.Log.Business.Workflows;
+using DavidTielke.OwHj123.Log.Business.Workflows.Contract;
 using DavidTielke.OwHj123.Logic.Domain.AuditationManagement;
+using DavidTielke.OwHj123.Logic.Domain.AuditationManagement.Contract;
 using DavidTielke.OwHj123.Logic.Domain.PersonManagement;
-using FileStoring;
+using DavidTielke.OwHj123.Logic.Domain.PersonManagement.Contract;
 using Ninject;
-using Workflows;
 
-namespace Mappings;
+namespace DavidTielke.OwHj123.Infrastructure.Mappings;
 
 public class KernelFactory
 {

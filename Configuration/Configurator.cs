@@ -1,4 +1,6 @@
-﻿namespace Configuration;
+﻿using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
+
+namespace DavidTielke.OwHj123.CrossCutting.Configuration;
 
 public class Configurator : IConfigurator
 {

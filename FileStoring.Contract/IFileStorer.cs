@@ -1,4 +1,4 @@
-﻿namespace FileStoring;
+﻿namespace DavidTielke.OwHj123.Data.FileStoring.Contract;
 
 public interface IFileStorer
 {

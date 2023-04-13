@@ -78,4 +78,22 @@ let usedAssemblies = a.AssembliesUsed.Where(ass => ass.ChildNamespaces.Any(cns =
 where usedAssemblies.Count() > 0
 select new { a, usedAssemblies, severity = Severity.Blocker}]]></Query>
   </Group>
+  <Group Name="Abhängigkeiten" Active="True" ShownInReport="False">
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>Keine direkte Abh. zwischen Logik Klassen</Name>
+warnif count > 0
+
+let ignoredClasses = new[]{"Program","KernelFactory"}
+
+from t in JustMyCode.Types.Where(t1 => !t1.IsInterface).Where(t1 => !ignoredClasses.Contains(t1.SimpleName))
+
+let ownTypesUsed = t.TypesUsed.Where(t1 => !t1.IsGeneratedByCompiler && !t1.IsThirdParty && !t1.ParentNamespace.NameLike("DataClasses"))
+let violations = ownTypesUsed.Where(t1 => !t1.IsInterface)
+
+where !t.IsGeneratedByCompiler
+ && !t.ParentNamespace.NameLike("DataClasses")
+ && !ownTypesUsed.All(t1 => t1.IsInterface)
+select new { t, violations, Severity = Severity.Critical }
+
+]]></Query>
+  </Group>
 </Queries>

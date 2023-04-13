@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <RootNamespace>DavidTielke.OwHj123.Data.DataCsvStoring.Contract</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Callbacks\" />
+    <Folder Include="DataClasses\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataClasses\DataClasses.csproj" />
+  </ItemGroup>
+
+</Project>

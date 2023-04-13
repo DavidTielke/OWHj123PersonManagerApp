@@ -4,11 +4,13 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <RootNamespace>DavidTielke.OwHj123.Data.FileStoring</RootNamespace>
+	  <RootNamespace>DavidTielke.OwHj123.CrossCutting.Configuration.Contract</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FileStoring.Contract\FileStoring.Contract.csproj" />
+    <Folder Include="DataClasses\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Callbacks\" />
   </ItemGroup>
 
 </Project>

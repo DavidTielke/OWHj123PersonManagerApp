@@ -4,6 +4,11 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <RootNamespace>DavidTielke.OwHj123.CrossCutting.Configuration</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Configuration.Contract\Configuration.Contract.csproj" />
+  </ItemGroup>
 
 </Project>

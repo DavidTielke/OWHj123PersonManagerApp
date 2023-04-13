@@ -1,6 +1,7 @@
-﻿using Configuration;
+﻿using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
 using DavidTielke.OwHj123.CrossCutting.DataClasses;
-using DavidTielke.OwHj123.Data.DataCsvStoring;
+using DavidTielke.OwHj123.Data.DataCsvStoring.Contract;
+using DavidTielke.OwHj123.Logic.Domain.PersonManagement.Contract;
 
 namespace DavidTielke.OwHj123.Logic.Domain.PersonManagement;
 

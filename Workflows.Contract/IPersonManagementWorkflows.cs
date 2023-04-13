@@ -1,6 +1,6 @@
 ﻿using DavidTielke.OwHj123.CrossCutting.DataClasses;
 
-namespace Workflows;
+namespace DavidTielke.OwHj123.Log.Business.Workflows.Contract;
 
 public interface IPersonManagementWorkflows
 {

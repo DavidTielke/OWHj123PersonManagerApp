@@ -1,10 +1,10 @@
-﻿using System.Runtime.CompilerServices;
-using Configuration;
+﻿using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
 using DavidTielke.OwHj123.CrossCutting.DataClasses;
-using DavidTielke.OwHj123.Logic.Domain.AuditationManagement;
-using DavidTielke.OwHj123.Logic.Domain.PersonManagement;
+using DavidTielke.OwHj123.Log.Business.Workflows.Contract;
+using DavidTielke.OwHj123.Logic.Domain.AuditationManagement.Contract;
+using DavidTielke.OwHj123.Logic.Domain.PersonManagement.Contract;
 
-namespace Workflows;
+namespace DavidTielke.OwHj123.Log.Business.Workflows;
 
 public class PersonManagementWorkflows : IPersonManagementWorkflows
 {

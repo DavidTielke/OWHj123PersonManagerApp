@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuditationManagement.Contract\AuditationManagement.Contract.csproj" />
     <ProjectReference Include="..\DataCsvStoring\DataCsvStoring.csproj" />
   </ItemGroup>
 
