@@ -2,6 +2,7 @@
 using DavidTielke.OwHj123.Logic.Domain.AuditationManagement;
 using DavidTielke.OwHj123.Logic.Domain.PersonManagement;
 using FileStoring;
+using Ninject;
 using Workflows;
 
 namespace DavidTielke.OwHj123.UI.ConsoleClient;
@@ -10,15 +11,17 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var auditRepository = new AuditEntryRepository();
-        var auditManager = new AuditEntryManager(auditRepository);
+        var kernel = new StandardKernel();
 
-        var personParser = new PersonParser();
-        var fileStorer = new FileStorer();
-        var personRepository = new PersonRepository(personParser, fileStorer);
-        var personManager = new PersonManager(personRepository);
+        kernel.Bind<IPersonManagementWorkflows>().To<PersonManagementWorkflows>();
+        kernel.Bind<IAuditEntryManager>().To<AuditEntryManager>();
+        kernel.Bind<IAuditEntryRepository>().To<AuditEntryRepository>();
+        kernel.Bind<IPersonManager>().To<PersonManager>();
+        kernel.Bind<IPersonRepository>().To<PersonRepository>();
+        kernel.Bind<IPersonParser>().To<PersonParser>();
+        kernel.Bind<IFileStorer>().To<FileStorer>();
 
-        var workflow = new PersonManagementWorkflows(auditManager, personManager);
+        var workflow = kernel.Get<IPersonManagementWorkflows>();
 
         var adults = workflow.RunGetAllAdults("david").ToList();
         Console.WriteLine($"## Erwachsene({adults.Count}) ##");

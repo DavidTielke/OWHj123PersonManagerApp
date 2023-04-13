@@ -7,7 +7,7 @@ public class PersonManager : IPersonManager
 {
     private readonly IPersonRepository _repository;
 
-    public PersonManager(IPersonRepository repository)
+    public PersonManager(IPersonRepository repository, IAuditEntryRepository repo2)
     {
         _repository = repository;
     }
