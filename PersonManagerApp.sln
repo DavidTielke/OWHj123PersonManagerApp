@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{5E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflows", "Workflows\Workflows.csproj", "{AF4A95C1-98AE-489D-9638-566EAC7EF14A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStoring", "FileStoring\FileStoring.csproj", "{A245BD2A-792B-4291-B687-EFAFF02196B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{AF4A95C1-98AE-489D-9638-566EAC7EF14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4A95C1-98AE-489D-9638-566EAC7EF14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF4A95C1-98AE-489D-9638-566EAC7EF14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A245BD2A-792B-4291-B687-EFAFF02196B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{DC5831A5-1DEE-4BF8-88E6-B26898469DE3} = {891F0FD3-8E09-497C-B273-571D745032CA}
 		{5E08B686-45DD-4160-B574-5A7F4073669F} = {C6D7B567-CF75-4EF2-A04F-C6E9995C88A2}
 		{AF4A95C1-98AE-489D-9638-566EAC7EF14A} = {5E08B686-45DD-4160-B574-5A7F4073669F}
+		{A245BD2A-792B-4291-B687-EFAFF02196B8} = {089D8235-330D-464A-9CEC-59D51B4DA01C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FDD3A3D-8642-425F-8C98-4E5B59686A0E}

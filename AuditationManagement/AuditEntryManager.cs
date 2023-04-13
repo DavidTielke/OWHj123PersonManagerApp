@@ -3,13 +3,13 @@ using DavidTielke.OwHj123.Data.DataCsvStoring;
 
 namespace DavidTielke.OwHj123.Logic.Domain.AuditationManagement;
 
-public class AuditEntryManager
+public class AuditEntryManager : IAuditEntryManager
 {
-    private readonly AuditEntryRepository _repository;
+    private readonly IAuditEntryRepository _repository;
 
-    public AuditEntryManager()
+    public AuditEntryManager(IAuditEntryRepository repository)
     {
-        _repository = new AuditEntryRepository();
+        _repository = repository;
     }
 
     public void Add(AuditEntry entry)

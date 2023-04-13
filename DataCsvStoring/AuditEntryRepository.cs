@@ -2,7 +2,7 @@
 
 namespace DavidTielke.OwHj123.Data.DataCsvStoring;
 
-public class AuditEntryRepository
+public class AuditEntryRepository : IAuditEntryRepository
 {
     public void Insert(AuditEntry entry)
     {

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataClasses\DataClasses.csproj" />
+    <ProjectReference Include="..\FileStoring\FileStoring.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,11 +2,11 @@
 
 namespace DavidTielke.OwHj123.Data.DataCsvStoring;
 
-public class PersonParser
+public class PersonParser : IPersonParser
 {
-    public IEnumerable<Person> Parse(string path)
+    public IEnumerable<Person> Parse(IEnumerable<string> lines)
     {
-        var persons = File.ReadAllLines(path)
+        var persons = lines
             .Select(l => l.Split(","))
             .Select(p => new Person
             {

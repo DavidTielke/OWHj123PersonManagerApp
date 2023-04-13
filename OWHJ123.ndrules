@@ -70,4 +70,12 @@ where violatingMethods.Count() > 0
 select new { t, violatingMethods, Severity = Severity.Critical}
 ]]></Query>
   </Group>
+  <Group Name="Architektur" Active="True" ShownInReport="False">
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>Domain-Komonenten dürfen keine Kopplung haben</Name>
+warnif count > 0 
+from a in JustMyCode.Assemblies.Where(ass => ass.ChildNamespaces.Any(ns => ns.NameLike("Logic.Domain")))
+let usedAssemblies = a.AssembliesUsed.Where(ass => ass.ChildNamespaces.Any(cns => cns.NameLike("Logic.Domain")))
+where usedAssemblies.Count() > 0
+select new { a, usedAssemblies, severity = Severity.Blocker}]]></Query>
+  </Group>
 </Queries>
