@@ -77,6 +77,24 @@ from a in JustMyCode.Assemblies.Where(ass => ass.ChildNamespaces.Any(ns => ns.Na
 let usedAssemblies = a.AssembliesUsed.Where(ass => ass.ChildNamespaces.Any(cns => cns.NameLike("Logic.Domain")))
 where usedAssemblies.Count() > 0
 select new { a, usedAssemblies, severity = Severity.Blocker}]]></Query>
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Impl. Assemblies dürfen nur auf Contracts zugreifen</Name>
+warnif count> 0
+
+let excludedAssemblies = new[]{"DataClasses","Mappings"}
+
+from a in JustMyCode.Assemblies
+                     .Where(t1 => excludedAssemblies.All(a3 => t1.Name != a3))
+                     .Where(a1 => !a1.Name.EndsWith(".Contract"))
+
+let assembliesUsed = a.AssembliesUsed
+                     .Where(a1 => !a1.IsThirdParty)
+                     .Where(a1 => excludedAssemblies.All(a2 => a2 != a1.Name))
+
+let forbiddenAssemblies = assembliesUsed.Where(a1 => !a1.Name.EndsWith(".Contract"))
+
+where forbiddenAssemblies.Count() > 0
+
+select new { a, forbiddenAssemblies }]]></Query>
   </Group>
   <Group Name="Abhängigkeiten" Active="True" ShownInReport="False">
     <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>Keine direkte Abh. zwischen Logik Klassen</Name>

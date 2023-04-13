@@ -1,4 +1,5 @@
-﻿using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
+﻿using DavidTielke.OwHj123.CrossCutting.Configuration;
+using DavidTielke.OwHj123.CrossCutting.Configuration.Contract;
 using DavidTielke.OwHj123.CrossCutting.DataClasses;
 using DavidTielke.OwHj123.Data.DataCsvStoring.Contract;
 using DavidTielke.OwHj123.Data.FileStoring.Contract;
@@ -18,6 +19,8 @@ public class PersonRepository : IPersonRepository
         _parser = parser;
         _storer = storer;
         FILE_PATH = config.Get<string>("person.csvpath");
+
+        var config2 = new Configurator();
     }
 
     public IQueryable<Person> LoadAll()
