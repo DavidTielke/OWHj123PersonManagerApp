@@ -12,7 +12,7 @@ internal class Program
         var kernel = new KernelFactory().Create();
 
         var config = kernel.Get<IConfigurator>();
-        config.Set("person.csvpath", "data.csv");
+        config.Set("person.csvpath", "data1.csv");
         config.Set("persons.agetreshold", 10);
         config.Set("user.id", "Lisa");
 
