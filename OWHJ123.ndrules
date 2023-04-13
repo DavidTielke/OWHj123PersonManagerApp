@@ -94,7 +94,17 @@ let forbiddenAssemblies = assembliesUsed.Where(a1 => !a1.Name.EndsWith(".Contrac
 
 where forbiddenAssemblies.Count() > 0
 
-select new { a, forbiddenAssemblies }]]></Query>
+select new { a, forbiddenAssemblies, Severity = Severity.Blocker }]]></Query>
+    <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Basisexception in jeder Komponente</Name>
+warnif count> 0
+
+
+from a in JustMyCode.Assemblies.Where(a1 => a1.Name.EndsWith(".Contract"))
+let exceptionTypes = a.ChildTypes.Where(t => t.NameLike("Exception") && t.BaseClass.FullName == "System.Exception")
+
+where exceptionTypes.Count() == 0
+
+select new { a }]]></Query>
   </Group>
   <Group Name="Abhängigkeiten" Active="True" ShownInReport="False">
     <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>Keine direkte Abh. zwischen Logik Klassen</Name>
